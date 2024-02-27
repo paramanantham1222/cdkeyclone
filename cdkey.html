@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cdkeyoffer.com</title>
+    <link rel="icon" href="./Tasks/cdlogo.png" type="icon/png">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-********************************" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/9e946a0de5.js" crossorigin="anonymous"></script>
+    <style>
+    body{
+        background-color: rgb(131, 227, 252);
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    
+    .nav nav{
+        display: flex;
+        background: linear-gradient(to top , rgba(46, 81, 89, 0.678) , rgb(0, 0, 0));
+        height: 90px;
+        align-items: center;
+        justify-content: space-evenly;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        
+        
+    }
+    .right{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 3px;
+    }
+    .navitem{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3px;
+    }
+    .logo img{
+        width: 200px;
+        padding: 10px;
+    }
+    .plat select{
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+    }
+    .sear i{
+        position: absolute;
+        padding: 10px;
+        color: darkgray;
+    }
+    .sear input{
+        width: 300px;
+        
+        height: 32px;
+        padding: 2px;
+        text-align: center;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid rgb(154, 154, 154);
+    }
+    .part{
+        display: flex;
+
+    }
+    .part img{
+        width: 26px;
+        padding: 10px;
+    }
+    .part a{
+        text-decoration: none;
+    }
+    .part h3{
+        font-size: 13px;
+        color: rgb(253, 193, 53);
+        padding: 5px;
+    }
+    .coun select{
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+    }
+    .rup select{
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+    }
+    .whole{
+        border: 1px solid rgb(154, 154, 154);
+        padding: 8px;
+        display: flex;
+        border-radius: 5px;
+    }
+    .whole a{
+        color: rgb(253, 193, 53);
+        text-decoration: none;
+        padding: 0px 10px;
+    }
+    .bar{
+        background-color: rgb(101, 101, 101);
+        width: 2px ;
+        height: 20px;
+        padding: 0px;
+    }
+    .main {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+        
+    }
+    .one {
+        border-radius: 10px;
+        width: calc(100% - 300px);
+        height: 400px;
+        overflow: hidden;
+    }
+    .mini{
+        display: flex;
+        animation: slide 10s infinite;
+        
+    }
+    .mini img{
+        width: 100%;
+        height: 400px;
+        
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+    @keyframes slide {
+        0% , 100% {
+            transform: translateX(0);
+        }
+        25% , 100% {
+            transform: translateX(-100%);
+        }
+        50% , 100% {
+            transform: translateX(-200%);
+        }
+        75% , 100% {
+            transform: translateX(-300%);
+        }
+
+        
+    }
+    .two {
+        
+        width: 350px;
+        height: 400px;
+        margin-left: 20px;
+    }
+   
+    .three {
+        position: relative;
+         width: 300px;
+         height: 200px;
+         margin-left: 10px;
+         aspect-ratio: 1/0.7;
+         cursor: pointer;
+    }
+    
+    .three img{
+        
+        
+        width: 100%;
+        height: 190px;
+        border-radius: 10px;
+    }
+    .col-one:hover img{
+        filter: brightness(0.3);
+    }
+    .col-two:hover img{
+        filter: brightness(0.3);
+    }
+    .col-three:hover img{
+        filter: brightness(0.3);
+    }
+    .col-four:hover img{
+        filter: brightness(0.3);
+    }
+    .col-five:hover img{
+        filter: brightness(0.3);
+    }
+    .col-six:hover img{
+        filter: brightness(0.3);
+    }
+    .col-sev:hover img{
+        filter: brightness(0.3);
+    }
+    .three:hover img{
+        filter: grayscale(1)
+         brightness(0.3);
+         
+    }
+    .content{
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        opacity: 0;
+    }
+    .con{
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        opacity: 0;
+    }
+    .con i{
+        color: white;
+        padding: 5px;
+        margin-top: 5px;
+        border-radius: 100px;
+        background-color: orange;
+        border: 1px solid rgba(255, 255, 255, 0.364);
+    }
+    .con a{
+        background-color: rgb(255, 204, 0);
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 30px;
+        color: black;
+    }
+    .con:hover{
+        opacity: 1;
+        transition:all 0.3s ease-in-out;
+    }
+    .content:hover{
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+    }
+    .content h2{
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .content a{
+        background-color: rgba(253, 193, 53, 0.884);
+        padding: 10px 20px;
+        color: black;
+        text-decoration: none;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: bolder;
+    }
+    
+    .three {
+        position: relative;
+         width: 300px;
+         height: 200px;
+         margin-left: 10px;
+         aspect-ratio: 1/0.7;
+         cursor: pointer;
+    }
+    
+    .three img{
+        
+        
+        width: 100%;
+        height: 190px;
+        border-radius: 10px;
+    }
+    
+    .four:hover img{
+        filter: grayscale(1)
+         brightness(0.3);
+         
+    }
+    .four{
+        position: relative;
+         width: 300px;
+         height: 200px;
+         margin-left: 10px;
+         aspect-ratio: 1/0.7;
+         cursor: pointer;
+    }
+    .four img{
+        transition: all 0.3s ease-in-out;
+        object-fit: cover;
+        width: 100%;
+        height: 190px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    .best{
+        width: 100%;
+        height: 500px;
+        
+    }
+    .row-one{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(110, 134, 208);
+        width: 100%;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        height: 60px;
+    }
+    .row-one-o{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(110, 134, 208);
+        width: 100%;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        height: 60px;
+    }
+    .row-one-o h1{
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        margin-left: 30px;
+        padding: 15px;
+        margin-top: 25px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .row-one-o a{
+        color: white;
+        text-decoration: none;
+        padding: 0px 30px 0px 0px;
+    }
+    .row-one-o a i{
+        padding: 10px;
+    }
+    .row-one h1{
+        color: white;
+        font-size: 20px;
+        padding: 0px 0px 0px 30px;
+    }
+    .row-one a{
+        color: white;
+        text-decoration: none;
+        padding: 0px 30px 0px 0px;
+    }
+    .row-one a i{
+        padding: 10px;
+    }
+    .row-two{
+        width: 100%;
+        height: 500px;
+       background-color: white;
+        display: flex;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }  
+    .row-two-o{
+        width: 100%;
+        height: 400px;
+       background-color: white;
+        display: flex;
+        
+    }
+    .row-three{
+        width: 100%;
+        height: 400px;
+       background-color: white;
+        display: flex;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    } 
+    .col-one {
+        width: 200px;
+        height: 400px;
+        position: relative;
+        
+    }
+    .col-two {
+        width: 200px;
+        height: 400px;
+        position: relative;
+        
+    }
+    .col-three {
+        width: 200px;
+        height: 400px;
+        position: relative;
+        
+    }
+    .col-four {
+        width: 200px;
+        height: 400px;
+        position: relative;
+        
+    }
+    .col-five {
+        width: 200px;
+        height: 400px;
+        position: relative;
+        
+    }
+    .col-six {
+        width: 200px;
+        height: 400px; 
+        position: relative;
+    }
+    .col-sev {
+        width: 200px;
+        height: 400px;
+        position: relative;
+    }
+    
+
+    .col-one img {
+        width: calc(100% - 30px);
+        height: 250px;
+        
+        padding: 25px 16px 0px 16px;
+    }
+    .col-two  img {
+        width: calc(100% - 30px);
+        height: 250px;
+        padding: 25px 16px 0px 16px;
+    }
+    .col-three  img {
+        width: calc(100% - 30px);
+        height: 250px;
+        padding: 25px 16px 0px 16px;
+    }
+    .col-four  img {
+        width: calc(100% - 30px);
+        height: 250px;
+        padding: 25px 16px 0px 16px;
+    }
+    .col-five  img {
+        width: calc(100% - 30px);
+        height: 250px;
+        padding: 25px 16px 0px 16px;
+    }
+    .col-six img  {
+        width: calc(100% - 30px);
+        height: 250px;
+        padding: 25px 16px 0px 16px;
+    }
+    .col-sev  img   {
+        width: calc(100% - 30px);
+        height: 250px;
+        padding: 25px 16px 0px 16px;
+    }
+    .footer {
+        
+        background-image: url(https://imgs.search.brave.com/BdVg8ROmX8HF8aO2T4Ge3IVNH1WP427CeGo9HgZg9eY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9saXZl/LnN0YXRpY2ZsaWNr/ci5jb20vNTAxNS81/NTQxOTE5NTAzXzJk/YTY2MzE0NDIuanBn);
+        text-align: center;
+    }
+    .footer a{
+        text-decoration: none;
+        color: rgb(141, 141, 141);
+    }
+    .footer p{
+        color: rgb(141, 141, 141);
+    }
+    
+    .row-four {
+        background-color: rgba(0, 0, 0, 0.689);
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .row-four h2{
+        color: white;
+        font-weight: 600;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .col-eight {
+        
+        width: 100%;
+        height: 200px;
+        text-align: center;
+    }
+    .col-eight ul{
+        list-style: none;
+        padding: 10px;
+    }
+    .col-eight li{
+        padding: 10px;
+
+    }
+    .col-eight a{
+        text-decoration: none;
+    }
+    .col-nine {
+       
+        width: 100%;
+        height: 200px;
+        text-align: center;
+    }
+    .col-nine li{
+        list-style: none;
+        padding: 10px;
+    }
+    .col-nine a{
+        text-decoration: none;
+        
+    }
+    .col-ten {
+        
+        width: 100%;
+        height: 200px;
+        text-align: center;
+    }
+    .col-ten li{
+        list-style: none;
+        padding: 10px;
+    }
+    .col-ten a{
+        text-decoration: none;
+    }
+
+    .col-eleven {
+        width: 100%;
+        
+        height: 200px;
+    }
+    .col-eleven a{
+        background-color: rgb(255, 204, 0);
+        text-decoration: none;
+        padding: 10px;
+        color: black;
+        font-weight: bolder;
+        font-size: 17px;
+        display: flex;
+        margin-top: 20px;
+    }
+    .col-eleven h3{
+        font-size: 12px;
+        color: rgb(139, 139, 139);
+    }
+    .last{
+        background-color: rgba(0, 0, 0, 0.66);
+    }
+    .details-game{
+        font-size: 14px;
+        padding: 0px 20px;
+        color: black;
+    }
+    .details-game i{
+        
+        text-decoration: line-through;
+    }
+    .details-game b{
+        color: red;
+    }
+    .details-game p:hover{
+        color: red;
+    }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <nav>
+            <div class="logo">
+                <h1><a href="#"><img src="https://static-cdn.cdkeyoffer.com/mall/image/logo/56-logo.png" alt="logo"></a></h1>
+            </div>
+            <div class="navitem">
+            <div class="plat">
+                <select name="" id="">
+                    <option value="">Platforms</option>
+                </select>
+            </div>
+            <div class="sear">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" name="" id="" placeholder="Search digitel keys">
+            </div>
+            <div class="part">
+                <a href=""><img src="https://static-cdn.cdkeyoffer.com/mall/image/gold/tree_ico.png" alt=""></a>
+                <a href=""><h3>Partner Program</h3></a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="coun">
+                <select name="" id="">
+                    <option value="">USA</option>
+                    <option value="">INDIA</option>
+                </select>
+            </div>
+            <div class="rup">
+                <select name="" id="">
+                    <option value="">EUR</option>
+                    <option value="">USD</option>
+                </select>
+            </div>
+            <div class="whole">
+                <a href="">Sign In</a>
+                <div class="bar"></div>
+                <a href="">Sign Up</a>
+            </div>
+            </div>
+        </nav>
+    </div><br><br><br><br>
+    <div class="main">
+        <div class="one">
+            <div class="mini">
+            <img src="./game.jpg" alt="">
+            <img src="./kaku.jpeg" alt="">
+            <img src="./game.jpg" alt="">
+            <img src="./kaku.jpeg" alt="">
+            </div>
+        </div>
+        <div class="two">
+            <div class="three">
+                <img src="./three.png" alt="">
+                <div class="content">
+                    <h2>Watch Dogs Legion Standard
+                        Edition Uplay CD Key EU</h2>
+                    <a href="">Buy Now</a>
+                </div>
+            </div>
+            <div class="four">
+                <img src="./four.jpg" alt="">
+                <div class="content">
+                    <h2>Far cry 6 Uplay CD Key EU</h2>
+                    <a href="">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="best">
+        <div class="row-one">
+            <h1>Best - Sellers</h1>
+            <a href="">More<i class="fa fa-plus" aria-hidden="true"></i></a>
+        </div>
+        <div class="row-two">
+            <div class="col-one">
+                <img src="./games/1.png" alt="">
+                <p class="details-game">Atomic Heart<br><i>USD : 78.99</i><br><b>USD : 25.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+                
+            </div>
+            <div class="col-two">
+                <img src="./games/2.jpeg" alt="">
+                <p class="details-game">Boundary<br><i>USD : 99.99</i><br><b>USD : 69.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+            <div class="col-three">
+                <img src="./games/3.png" alt="">
+                <p class="details-game">KAKU Ancient Seal<br><i>USD : 50.44</i><br><b>USD : 10.01</b></p>
+
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+            <div class="col-four">
+                <img src="./games/4.png" alt="">
+                <p class="details-game">Yet Another Zombie Survivors<br><i>USD : 69.99</i><br><b>USD 30.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+            <div class="col-five">
+                <img src="./games/8.png" alt="">
+                <p class="details-game">Gardian Of the Galaxy<br><i>USD : 70.67</i><br><b>USD : 20.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+            <div class="col-six">
+                <img src="./games/6.jpg" alt="">
+                <p class="details-game">WarHammer Vermintide<br><i>USD : 60.98</i><br><b>USD : 15.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+            <div class="col-sev">
+                <img src="./games/7.jpg" alt="">
+                <p class="details-game">Player Unkown Battleground<br><i>USD : 89.99</i><br><b>USD : 23.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="new">
+        <div class="row-one-o">
+            <h1>New Products</h1>
+            <a href="">More<i class="fa fa-plus" aria-hidden="true"></i></a>
+        </div>
+        <div class="row-two-o">
+            <div class="col-one">
+                <img src="./games/1.png" alt="">
+                <p class="details-game">Atomic Heart<br><i>USD : 78.99</i><br><b>USD : 25.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+            <div class="col-two">
+                <img src="./games/2.jpeg" alt="">
+                <p class="details-game">Boundary<br><i>USD : 99.99</i><br><b>USD : 69.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+            <div class="col-three">
+                <img src="./games/3.png" alt="">
+                <p class="details-game">KAKU Ancient Seal<br><i>USD : 50.44</i><br><b>USD : 10.01</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+            <div class="col-four">
+                <img src="./games/4.png" alt="">
+                <p class="details-game">Yet Another Zombie Survivors<br><i>USD : 69.99</i><br><b>USD 30.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+            <div class="col-five">
+                <img src="./games/8.png" alt="">
+                <p class="details-game">Gardian Of the Galaxy<br><i>USD : 70.67</i><br><b>USD : 20.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+            <div class="col-six">
+                <img src="./games/6.jpg" alt="">
+                <p class="details-game">WarHammer Vermintide<br><i>USD : 60.98</i><br><b>USD : 15.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+            <div class="col-sev">
+                <img src="./games/7.jpg" alt="">
+                <p class="details-game">Player Unkown Battleground<br><i>USD : 89.99</i><br><b>USD : 23.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="row-three">
+            <div class="col-one">
+                <img src="./games/1.png" alt="">
+                <p class="details-game">Atomic Heart<br><i>USD : 78.99</i><br><b>USD : 25.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+            <div class="col-two">
+                <img src="./games/2.jpeg" alt="">
+                <p class="details-game">Boundary<br><i>USD : 99.99</i><br><b>USD : 69.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+            <div class="col-three">
+                <img src="./games/3.png" alt="">
+                <p class="details-game">KAKU Ancient Seal<br><i>USD : 50.44</i><br><b>USD : 10.01</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+            <div class="col-four">
+                <img src="./games/4.png" alt="">
+                <p class="details-game">Yet Another Zombie Survivors<br><i>USD : 69.99</i><br><b>USD 30.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+            <div class="col-five">
+                <img src="./games/8.png" alt="">
+                <p class="details-game">Gardian Of the Galaxy<br><i>USD : 70.67</i><br><b>USD : 20.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+            <div class="col-six">
+                <img src="./games/6.jpg" alt="">
+                <p class="details-game">WarHammer Vermintide<br><i>USD : 60.98</i><br><b>USD : 15.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+            <div class="col-sev">
+                <img src="./games/7.jpg" alt="">
+                <p class="details-game">Player Unkown Battleground<br><i>USD : 89.99</i><br><b>USD : 23.99</b></p>
+                <div class="con">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i><br>
+                    <a href="">More Details</a>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <div class="footer">
+        <div class="row-four">
+            <div class="col-eight">
+                <h2>GET TO KNOW US</h2>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Game News</a></li>
+                    <li><a href="">Help Center</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-nine">
+                <h2>CDKEYOFFER</h2>
+                <li><a href="">Terms Of Service</a></li>
+                <li><a href="">Privacy Policy</a> </li>
+                <li><a href="">Social Media Policy</a>  </li>
+                <li><a href="">Returns & Refunds</a> </li>
+                <li><a href="">User Safety</a> </li>
+            </div>
+            <div class="col-ten">
+                <h2>PLATFORMS</h2>
+                <ul>
+                    <li><a href="">STEAM</a></li>
+                    <li><a href="">ORIGIN</a></li>
+                    <li><a href="">UPLAY</a></li>
+                    <li> <a href="">PLAYSTATION</a></li>
+                </ul>
+             </div>
+            <div class="col-eleven">
+                <a href="">Subscribe to Cdkeyoffer Newsletter</a>
+                <h3>GET THE BEST OFFER THROUGH E-MAIL / SMS</h3>
+            </div>
+        </div>
+        <div class="last">
+        <a href="">Email: service@cdkeyoffer.com</a>
+        <p>&copy 2024 Cdkeyoffer All riqhts reserved.</p>
+    </div>
+    </div>
+</body>
+</html>
